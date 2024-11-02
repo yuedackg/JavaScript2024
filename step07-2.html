@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var zeikomi ;
+        function zeiA(){
+            zeikomi = 1000 * 1.05 ;
+            alert( "税込価格は" + zeikomi + "円です");
+        }
+        function zeiB(){
+            zeikomi = 2000 * 1.05 ;
+            alert( "税込み価格は" + zeikomi + "円です");
+        }
+        function zeiC(){
+            zeikomi = 2500 * 1.05 ;
+            alert( "税込価格は" + zeikomi + "円です");
+        }
+    </script>
+</head>
+<body>
+    <nl>
+        <li>商品A（1000円） <button onclick="zeiA()">税込価格</button></li>
+        <li>商品B（2000円） <button onclick="zeiB()">税込価格</button></li>
+        <li>商品C（2500円） <button onclick="zeiC()">税込価格</button></li>
+    </nl>
+
+</body>
+</html>
