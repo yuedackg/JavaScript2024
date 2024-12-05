@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calc( a, b ){
+            console.log( a * b );
+
+        }
+    </script>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <th>添字</th>
+            <th>a</th>
+            <th>b</th>
+            <th>a × bを計算</th>
+        </thead>
+        <tr>
+            <td>0</td>
+            <td>5</td>
+            <td>33</td>
+            <td><button onclick="calc(5, 33)">計算結果</button></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>12</td>
+            <td>14</td>
+            <td><button onclick="calc( 12, 14)">計算結果</button></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>18</td>
+            <td>65</td>
+            <td><button onclick="calc( 18, 65)">計算結果</button></td>
+        </tr>
+    </table>
+</body>
+</html>
