@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>最初の　JavaScript</title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="sample01.css">
+    <script>
+        var total = 4800;
+        var a = new Array(3);
+        a[0] = 2000;
+        a[1] = 400;
+        a[2] = 500; 
+        function goukei(i) {
+            if (document.forms[0].elements[i].checked == true) {
+                total = total + a[i];
+            } else {
+                total = total - a[i];
+            }
+            document.forms[0].elements[3].value = total;
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>体育館の利用料金</h1>
+    <div class="st1">基本使用料（2面、4時間）　4,800円</div>
+    　
+    <form>
+        <input type="checkbox" name="" id="" onclick="goukei(0)">夜間照明（2,000円）<br>
+        <input type="checkbox" name="" id="" onclick="goukei(1)">バレーボール用ネット×2面（400円）<br>
+        <input type="checkbox" name="" id="" onclick="goukei(2)">バレーボール×10個（500円）<br>
+        <br>
+
+        合計金額　
+        <input type="text" name="" id="" value="4800" size="6">
+        円
+    </form>　　　
+
+
+
+
+
+
+</body>
+
+</html>

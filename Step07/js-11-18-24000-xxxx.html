@@ -1,0 +1,83 @@
+<!-- filename: js-step07-11-18-24000-xxxx.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var a = new Array( 5, 12, 18);
+        var b = new Array( 33, 14, 65);
+        function kakeru( i){
+            var kotae = a[i] * b[i];
+            alert( kotae)
+        }
+        function mul2(){
+            var ans = 1 ;
+            ans = ans * 2;
+            ans = ans * 2;
+            ans = ans * 2;
+            ans = ans * 2;
+            ans = ans * 2;
+            ans = ans * 2;
+            ans = ans * 2;
+            ans = ans * 2;
+            ans = ans * 2;
+            ans = ans * 2;
+            ans = ans * 2;
+            ans = ans * 2;
+            ans = ans * 2;
+            ans = ans * 2;
+            ans = ans * 2;
+            ans = ans * 2;
+            ans = ans * 2;
+            ans = ans * 2;
+            ans = ans * 2;
+            ans = ans * 2;
+            
+            alert( ans);
+            
+        }
+        function for2(){
+            var ans = 1;
+            for ( i = 1 ; i <= 20 ; i++){
+                ans = ans * 2;
+            }
+            alert( ans);
+        }
+    </script>
+</head>
+<body>
+    <h1>配列の演算</h1>
+    <table border="1">
+        <thead>
+            <th>添字</th>
+            <th>a</th>
+            <th>b</th>
+            <th>a x b の計算</th>
+            
+        </thead>
+        <tr>
+            <th>0</th>
+            <td>5</td>
+            <td>33</td>
+            <td><button onclick="kakeru(0)">計算結果</button></td>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td>12</td>
+            <td>14</td>
+            <td><button onclick="kakeru(1)">計算結果</button></td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>18</td>
+            <td>65</td>
+            <td><button onclick="kakeru(2)">計算結果</button></td>
+        </tr>
+    </table>
+    <hr>
+    <button onclick="mul2()">２を20回かける</button>
+    <button onclick="for2()">２を20回かける</button>
+    
+</body>
+</html>

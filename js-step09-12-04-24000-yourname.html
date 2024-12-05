@@ -1,0 +1,55 @@
+<!-- filename: js-step09-12-04-24000-yourname.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>forによる繰り返し、document.write()</title>
+</head>
+
+<body>
+
+    <h1>単価ｘ個数の一覧表</h1>
+    <table border="1">
+        <thead>　 <!-- 見出し行を作る -->
+            <th> <!-- 見出しのセル -->
+                個数
+            </th>
+            <th>商品A</th>
+            <th>商品B</th>
+            <th>商品C</th>
+        </thead>
+
+        <script>
+            shouhinA = 300;
+            shouhinB = 1204;
+            shouhinC = 1212;
+            for (i = 1 ; i <= 20; i++) {
+                document.write("<tr>");
+
+                document.write("<th>");
+                document.write(i);
+                document.write("個</th>");
+
+                document.write("<td>");
+                document.write(shouhinA * i)
+                document.write("円</td>");
+
+                document.write("<td>");
+                document.write(shouhinB * i)
+                document.write("円</td>");
+
+                document.write("<td>");
+                document.write(shouhinC * i)
+                document.write("円</td>");
+
+                document.write("</tr>");
+            }
+
+        </script>
+
+    </table>
+
+</body>
+
+</html>

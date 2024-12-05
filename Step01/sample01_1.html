@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>体育館の利用料金</title>
+    <style>
+
+    </style>
+    <script>
+
+        var total = 4800;
+        var a = new Aray(3);
+        a[0] = 2000;
+        a[1] = 400;
+        a[2] = 500;
+
+        function goukei( i){
+            if ( document.form[0].elements[i].checked == true ){
+                total  = total + a[i];
+            } else {
+                total = total - a[i];
+            }
+            document.form[0].elements[3].value = total ;
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <img src="./../images/tahiti01.jpg"
+        alt="タヒチの写真"
+        onclick="alert('クリックされた')">
+        
+</body>
+
+</html>

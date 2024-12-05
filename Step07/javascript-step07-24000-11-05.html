@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function abc(s) {           //   s : 引数（ひきすう; argument）
+            //  呼び出し側で書かれた数字が格納される
+            a = s * 3;
+            alert("a : " + a);
+        }
+        // 関数の引数
+        // 関数名の後ろの括弧の中に、個数分の変数の名前を書く。
+        // 引数を使って、プログラムを書く。
+        function seihoukei(hen) {
+            var menseki = hen * hen;
+            alert("面積は" + menseki);
+        }
+    </script>
+</head>
+
+<body>
+
+    <button onclick="abc( 5)">
+        計算結果を表示　sの値は5
+    </button>
+    <button onclick="abc( 10)">
+        計算結果を表示　sの値は10
+    </button>
+    <hr>
+    <button onclick="seihoukei( 3)">長さ3㎝の正方形の面積</button>
+    <button onclick="seihoukei(5)">長さ5㎝の正方形の面積</button>
+    <hr>
+    <!-- 
+        ①計算する関数名を決める：ChuhoukeiMenseki
+        パラメータの意味を決める
+            ②第1引数：w  横の長さ
+            ③第2引数：h　縦の長さ
+    -->
+    <script>
+        function ChouhoukeiMenseki(w, h) {
+            var menseki = w * h;
+            alert("w:" + w + "と、h:" + h + "の面積は" + menseki);
+        }
+    </script>
+    <button onclick="ChouhoukeiMenseki( 3, 5 )">
+        横の長さが3cm、縦の長さが5cmの長方形の面積
+    </button>
+    <hr>
+    <script>
+        // 関数zeikomi()は、呼び出されると、「税込み＊＊＊＊円です」と表示するモノを作りなさい
+        // 【ヒント】
+        // １．関数の名前は？　zeikomi　　　※共通　
+        // ２．引数の個数は？　1個          ※共通
+        // ３．引数の名前は？　kakaku　　　　※作成者によって違う
+        // ４．計算結果を格納する宣言は？　var zk  ※作成者によって異なる
+        // ５．計算をする zk = kakaku * ( 1.00 + 0.1 )
+        // ６．表示する   alert()
+        function zeikomi( kakaku){
+            var zk ;
+            zk = kakaku * ( 1.00 + 0.1 ) ;
+            alert ( "税込み価格は"  +  zk +   "円です" ) ;
+
+        }
+
+    </script>
+    ・商品A（1000円）　<button onclick="zeikomi( 1000)">税込み価格</button><br>
+    ・商品B（2000円）　<button onclick="zeikomi( 2000)">税込み価格</button><br>
+    ・商品C（3000円）　<button onclick="zeikomi( 3000)">税込み価格</button><br>
+
+</body>
+
+</html>

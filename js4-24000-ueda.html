@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript dai 4 kaime</title>
+    <script>
+
+        function pressButton() {
+            var a = 10 ;　// 変数aを使います（＝宣言）           
+            var b; // 変数ｂを使います
+            var c; //　変数ｃを使います。
+            // var a, b, c  ;
+            // 宣言されただけでは中身はわからない＝不定
+
+
+            b = 20;    //　20　→　b
+            c = a + b; // 代入演算子＝
+
+            // 変数aと変数ｂの内容を入れ替えたい
+            var temp;
+            temp = a;
+            a = b;
+            b = temp
+
+            alert("cの数字は" + c + "です  a:" + a + ",b:" + b);
+        }
+        var c ;
+        function myname() {
+            var a, b;
+            a = 10;
+            b = 20;
+            {
+                var d;
+                d = a + b;
+            }
+            alert(c)
+
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="pressButton( 'ueda' )">
+        表示される文字列
+    </button>
+
+    <button onclick="alert()">
+        moji wo kaku
+    </button>
+    <button>
+        mojire sanple.
+    </button>
+
+    <button onclick="myname()">
+        ueda
+    </button>
+</body>
+
+</html>

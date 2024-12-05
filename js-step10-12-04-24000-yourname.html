@@ -1,0 +1,35 @@
+<!-- filename: js-step10-12-04-24000-yourname.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function doCheck( p){
+            if ( p == 3   ) {
+                alert( "正解！！");
+            }else {
+                alert( "不正解");
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <h1>（問題）</h1>
+    <p>次の一次方程式を満たす解を求め、解のボタンをクリックしなさい。</p>
+    
+    <p>x+6=9</p>
+
+    <button onclick="doCheck(1)">x = 1</button>
+    <button onclick="doCheck(2)">x = 2</button>
+    <button onclick="doCheck(3)">x = 3</button>
+    <button onclick="doCheck(4)">x = 4</button>
+    <button onclick="doCheck(6)">x = 6</button>
+
+    <p>
+        <span>作成物</span><br>
+    </p>
+
+</body>
+</html>

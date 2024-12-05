@@ -1,0 +1,45 @@
+<!-- filename: js-step08-11-25-24000-yourname.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function foo() {
+            for (  i = 0    ;    i < 10 ;  i = i + 1   ) {   
+                document.write("hello<br>");
+            }
+        }
+        // 関数sum2to100()を定義する
+        function sum2to100(){
+            goukei = 0 ;        //合計の初期値は０
+            for(  i = 2   ;  i<=100  ; i = i+2  ) {
+                goukei = goukei + i ;
+            }
+            alert( "合計は" +  goukei);
+        }
+
+        function bar(){
+            var atai = 1;
+            sum = 0 ;
+            for ( i = 0 ;  i < 16  ; i++){
+                atai = atai / 2 ;
+                sum = sum + atai ;
+            }
+            document.write( "sum = " + sum);
+            document.write( "atai = " + atai );
+
+        }
+
+    </script>
+</head>
+<body>
+    <h1>繰り返し</h1>
+    <button onclick="foo()">helloを10回繰り返す</button>
+    <button onclick="sum2to100()">2+4+6+・・・+100を計算する</button>
+    <button onclick="bar()">2<sup>-16</sup>までの合計</button>
+
+</body>
+
+</html>

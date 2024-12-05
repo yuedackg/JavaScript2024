@@ -1,0 +1,57 @@
+<!-- filename: javascript-step08-24000-11-06.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function countUp() {
+            var m = 1;  /* 変数の宣言と初期化 */
+            m = m * 2;　/* 変数の値を2倍 */
+            m = m * 2;　/* 変数の値を2倍 */
+            m = m * 2;  　/* 変数の値を2倍 */
+            m = m * 2;　/* 変数の値を2倍 */
+            m = m * 2;　/* 変数の値を2倍 */
+            m = m * 2;
+            m = m * 2;
+            m = m * 2;
+            m = m * 2;
+            m = m * 2;
+
+            alert("m=" + m);
+        }
+        function countUp2() {
+            // 変数iを１から始めて、1つずつ増やして、10まで繰り返す。
+            //            for (  変数の宣言と初期化　 ; 　終了条件  ;  増分  ){
+            //              繰り返しの内容
+            //            }
+            var m = 1;
+            for (var i = 1; i <= 10; i = i + 1) {
+                m = m * 2;
+            }
+            alert("m=" + m);
+        }
+        function countUp3(){
+            var m = 1 ;         // もとの数字は１
+                                // ｋが一つずつ増える　
+                                //　k = 1, 2, 3, ..., 20 
+            for (  var k = 1 ;  k <= 20 ; k = k + 1  ){
+                m = m * 2 ;
+            }
+            // for ( var k = 20; k >= 0 ; k = k -1 ){
+            //     m = m * 2 ;
+            // }
+            alert("m=" + m);
+        }
+
+    </script>
+</head>
+
+<body>
+    <button onclick="countUp()">カウントアップ</button>
+    <button onclick="countUp2()">カウントアップ改良版</button>
+    <button onclick="countUp3()">１に２を20回かける</button>
+</body>
+
+</html>
