@@ -1,0 +1,41 @@
+<!-- filename: js-step09-12-09-24000-yourname.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>単価×個数の一覧</h1>
+    <table border="1">
+        <tr>
+            <td>個数</td>
+            <td>商品A</td>
+            <td>商品B</td>
+            <td>商品C</td>
+        </tr>
+        <tr>
+            <td>1個</td>
+            <td>300円</td>
+            <td>1204円</td>
+            <td>1212円</td>
+        </tr>
+        <script>
+            shouhinA = 300
+            shouhinB = 1204
+            shouhinC = 1212
+            for (i = 2; i <= 20; i++){
+                document.write("<tr>");
+                document.write("<td>" + i + "個" + "</td>");
+                document.write( "<td>" + (i * shouhinA ) + "円" +"</td>");
+                document.write( "<td>" + (i * shouhinB ) + "円" +"</td>");
+                document.write( "<td>" + (i * shouhinC ) + "円" +"</td>");
+                document.write("</tr>");
+            }
+        </script>
+    </table>
+</body>
+
+</html>
