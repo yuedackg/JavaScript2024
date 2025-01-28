@@ -1,0 +1,40 @@
+<!-- filename: js-step11-1-12-10-24000-yourname.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function hantei() {
+            let item = document.getElementById("seiseki").value;
+            // alert(item * 1 + 100)          // 文字列itemは　,item*1とすることで数字になる。
+
+            if (item < 44) {
+                alert("grade 1: 不可")
+
+            } else if (item < 50) {
+                alert("grade 2: 可")
+            
+            } else if ( item < 80 ){
+                alert( "grade 3:　");
+            
+            } else if ( item < 90 ){
+                alert( "grade 4:");
+            
+            }else{
+                alert( "grade 5:");
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>成績を判定する</h1>
+    <label>成績を半角で入力してください：</label>
+    <input type="text" id="seiseki">
+    <button onclick="hantei()">判定します。</button>
+</body>
+
+</html>

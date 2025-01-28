@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>アンケート</h1>
+    <form action="" method="post">
+        <!-- methodにpostを指定するとURLの欄に入力された文字が
+         　　表示されなくなる。　→セキュリティ的に安全になっている
+          -->
+
+        <label for="namae">名前</label>
+        <input type="text" name="namae">
+        <hr>
+
+        <h2>質問（１）</h2>
+        <p>英語を話せるようになりたいと思いますか？</p>
+        <input type="radio" name="speaking" id="" value="1">はい
+        <input type="radio" name="speaking" id="" value="2">どちらともいえない
+        <input type="radio" name="speaking" id="" value="3">いいえ
+        <!-- value属性は、プログラム側から指定されたものを記述する。
+         　　デザイナーが自分の裁量で書くことはない。 -->
+        <hr>
+
+        <h2>質問（２）</h2>
+        <p>英語以外で興味のある語学があれば選択してください（複複数選択可）</p>
+        <input type="checkbox" name="interesting" id="" value="Ge">ドイツ語
+        <input type="checkbox" name="interesting" id="" value="Fr">フランス語
+        <input type="checkbox" name="interesting" id="" value="It">イタリア語
+        <input type="checkbox" name="interesting" id="" value="Sp">スペイン語
+        <input type="checkbox" name="interesting" id="" value="Ch">中国語
+        <hr>
+
+        <h2>質問（３）</h2>
+        <p>英語の授業に対する意見や感想</p>
+        <textarea name="iken" id="" cols="30" rows="10"></textarea>
+        <hr>
+        <!-- テキストエリアは、タグ名が異なるので注意
+         　　最初に、行数と列数を選んでおくと、最後の調整で、
+         　　自分で属性名を考えなくてよい -->
+
+        <h2>質問（４）</h2>
+        <p>あなたの年齢を選択してください。</p>
+        <select name="nenrei" id="">
+            <option value="">以下から選択してください</option>
+            <option value="10">10才～19才</option>
+            <option value="20">20才～29才</option>
+            <option value="30">30才～39才</option>
+            <option value="40">40才～49才</option>
+            <option value="50">50才～59才</option>
+            <option value="60">60才～69才</option>
+            <option value="70">70才～</option>
+            <!-- valueはそれぞれの選択に対して独立の値を付ける
+             　　同じ値を書くと、プログラム側からの選択士の判断ができなくなる -->
+        </select>
+        <hr>
+        <input type="submit" value="送信">
+        <input type="reset" value="クリア">
+        <!-- submitボタンは、インターネットサーバに入力された情報を送る -->
+         <!-- resetボタンは、フォームの中に入力された情報をクリアする -->
+    </form>
+</body>
+</html>

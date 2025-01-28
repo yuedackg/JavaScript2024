@@ -1,0 +1,56 @@
+<!-- filename: js-step14-2025-0121-24000-yourname.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function hanteiScore(){
+            var score ;                         // 変数の準備
+            score = prompt( "seiseki wo irete kudasai:" , 0)
+            score = score * 1;                  // 文字列を数字に変換する
+            // 不正入力の処理　→０点より低い数値と、１００点より大きい数字はNG
+            if ( score < 0 || 100 < score ){    // ||は orを指すキーワード
+                alert( "不正入力です");
+                return;                         // 戻り値なし
+            }
+            // 成績の判定
+            if ( 90 <= score  ){
+                alert( "grade A");
+                return ;
+            }
+            if ( 80 <= score && score < 90 ){ // grade B : 80-89
+                alert( "grade B");
+                return;
+            }
+                                            // grade C: 50-79
+                                            // grade D: 44-49
+            if( score < 44){                // grade E: 0-43
+                alert( "grade E");
+            }
+        }
+    </script>
+    <!-- 外部のファイル書かれたプログラムを読み込む -->
+    <script src="24000-0121.js"></script>
+</head>
+
+<body>
+    <button onclick="stringInputPrint()">
+        prompt()の初期値あり
+    </button>
+
+    <hr>
+    <button onclick="hanteiScore()">
+        得点の判定
+    </button>
+    <!-- 
+    90-100 :A
+    80-89  :B
+    50-79  :C
+    44-49  :D
+    0-43   :E
+     -->
+</body>
+
+</html>
