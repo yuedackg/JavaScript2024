@@ -1,19 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-    
+        // 画像１がクリックされたときの処理
+        // 画像１を非表示にする
+        function img1() {
+            // 画像１：window.document.images[0]
+            //        window.document.pic1
+            // スタイルシート：　style
+            // 表示：display = "none"(非表示), "block"（表示）
+            window.document.pic1.style.display = "none";
+            // 表示する
+            // window.document.pic1.style.display ="block"
+        }
+        function img2(){
+            window.document.pic2.style.display ="none";
+        }
+        function img3(){
+            // 3枚目の画像は、0からカウントするので、添え字は、２となる
+            window.document.images[2].style.display = "none";
+        }
+        function hideImage( i ){
+            // 似た名前の関数を、関数の引数を使うことで一つにまとめた
+            window.document.images[i-1].style.display = "none";
+        }
+        function showImages(){
+            window.document.images[0].style.display="block";
+            window.document.images[1].style.display="block";
+            window.document.images[2].style.display="block";
+            window.document.images[3].style.display="block";
+            // 繰り返し
+            for( i = 0 ; i < 4; i++){
+                window.document.images[i].style.display="block";
+            }
+            
+            // 以下のコードは使われない
+            window.document.pic1.style.display = "block";
+            window.document.pic2.style.display = "block";
+            window.document.pic3.style.display = "block";
+            window.document.pic4.style.display = "block";
+            // 変数の名称変更は、繰り返し文で書けない  
+
+        }
+        function showYahooPage(){
+            window.open( "http://www.yahoo.co.jp/");
+        }
+        // window等はデータと関数をまとめたもの→オブジェクトという
+        // displayはイコールを挟んで右辺の値を左辺に代入する→プロパティという
+        // open()は、URLを開くなどのプログラムの実行となる→メソッドという
+
     </script>
 </head>
+
 <body>
     <h1>クリックすると画像を消す</h1>
-    
+    <!-- 
+    画像のリンクを４つ作っています。
+    画像１がクリック→　img1()が実行；名前がpic1
+    ～
+    画像4がクリック→　img4()が実行；名前がpic4
+    -->
     <img src="images/1.jpg" alt="" onclick="img1()" name="pic1">
     <img src="images/2.jpg" alt="" onclick="img2()" name="pic2">
     <img src="images/3.jpg" alt="" onclick="img3()" name="pic3">
-    <img src="images/4.jpg" alt="" onclick="img4()" name="pic4">
+    <img src="images/4.jpg" alt="" onclick="hideImage(4)" name="pic4">
+
+    <!-- 
+    ボタンの仕様
+    ボタンに表示される文字列：消えた画像を表示する
+    クリックされたときに実行する関数：showImages() 
+    -->
+    <button onclick="showImages()">消えた画像を表示する</button>
+    <button onclick="showYahooPage()"> Yahoo Japanを開く</button>
 </body>
+
 </html>
