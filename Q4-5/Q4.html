@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        // 1次元配列を作成する
+        var a = new Array(2);
+        // 配列の配列を作成する
+        a[0] = new Array(3);
+        a[1] = new Array(3);
+        // 配列の初期化
+        a[0][0] = 5;
+        a[0][1] = 12;
+        a[0][2] = 19;
+        a[1][0] = 33;
+        a[1][1] = 14;
+        a[1][2] = 65;
+        // 添字を付けるときには、そのインデックスに注意する
+        function calc1() {
+            var ans = a[0][0] * a[1][0];
+            alert(ans)
+        }
+        function calc2() {
+            var ans = a[0][1] * a[1][1];
+            alert(ans)
+        }
+        function calc3() {
+            var ans = a[0][2] * a[1][2];
+            alert(ans)
+        }
+    </script>
+</head>
+
+<body>
+    <h3>配列の演算</h3>
+    <!-- 表を作時に枠線のサイズを指定する -->
+    <table border="1">
+        <!-- 見出し行の時にはtrタグではなく、theadタグを使用する -->
+        <thead>
+            見出し項目は、tdタグではなく、thタグを使用する
+            <th>添字</th>
+            <th>a</th>
+            <th>b</th>
+            <th>a x b を計算</th>
+        </thead>
+        <tr>
+            <td>0</td>
+            <td>5</td>
+            <td>33</td>
+            <td><button onclick="calc1()">計算結果</button></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>12</td>
+            <td>14</td>
+            <td><button onclick="calc2()">計算結果</button></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>19</td>
+            <td>65</td>
+            <td><button onclick="calc3()">計算結果</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>

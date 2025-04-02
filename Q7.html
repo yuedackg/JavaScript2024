@@ -1,0 +1,63 @@
+<!-- filename: Q7.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function calc() {
+            var goukei = 0;
+            for (i = 2; i <= 100; i = i + 2) {
+                goukei = goukei + i;
+            }
+            alert("2,4,6,8,・・・,100の合計は" + goukei + "です");
+        }
+    </script>
+    <script>
+        function calc2() {
+            var goukei = 0;
+            var half = 1;
+            for (i = 1; i <= 10; i++) {
+                half = half / 2;
+                goukei = goukei + half;
+            }
+            alert(goukei);
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <span>偶数の合計</span>
+    <p>以下のボタンをクリックする。<br>
+        ２，４，６，８，・・・・、１００までのすべてを合計した
+        結果を表示する。</p>
+    <button onclick="calc2()">計算結果</button>
+    <hr>
+    <span>分数の合計</span>
+    <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+        <span style="padding: 0 10px; border-bottom: 1px solid #000000;">1</span>
+        <span style="padding: 0 10px;">2 <sup>1</sup></span>
+    </span>
+    +
+    <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+        <span style="padding: 0 10px; border-bottom: 1px solid #000000;">1</span>
+        <span style="padding: 0 10px;">2 <sup>2</sup></span>
+    </span>
+    +
+    <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+        <span style="padding: 0 10px; border-bottom: 1px solid #000000;">1</span>
+        <span style="padding: 0 10px;">2 <sup>3</sup></span>
+    </span>
+    +
+    ・・・
+    +
+    <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+        <span style="padding: 0 10px; border-bottom: 1px solid #000000;">1</span>
+        <span style="padding: 0 10px;">2 <sup>10</sup></span>
+    </span>
+    <button onclick="calc2()">計算結果</button>
+</body>
+</html>

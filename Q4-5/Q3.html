@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        // 変数の宣言と初期化
+        var a = 10;
+        var b = 4;
+
+        function tasizan() {
+            // 変数の宣言と演算を同時に行う
+            var ans = a + b;
+            alert("答えは" + ans + "です");
+        }
+        function hikizan() {
+            var ans = a - b;
+            alert("答えは" + ans + "です");
+        }
+        function warizan() {
+            var ans = a / b;
+            alert("答えは" + ans + "です");
+        }
+        function kakezan() {
+            var ans = a * b;
+            alert("答えは" + ans + "です");
+        }
+        function amari() {
+            var ans = a % b;
+            alert("答えは" + ans + "です");
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>変数の計算</h1>
+    a = 10 、b = 4 について<br>
+    変数あと変数bの計算結果を表示します。<br>
+
+    <!-- クリックしたときにそれぞれの関数をどうさせる -->
+    <button onclick="tasizan()">足し算</button>
+    <button onclick="hikizan()">引き算</button>
+    <button onclick="kakezan()">掛算</button>
+    <button onclick="warizan()">割り算</button>
+    <button onclick="amari()">余り</button>
+
+</body>
+
+</html>

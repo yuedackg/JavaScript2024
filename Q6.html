@@ -1,0 +1,31 @@
+<!-- filename: Q6.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function goukei() {
+            // 変数の宣言と初期化。合計を取るときは0。
+            var kai = 0;
+            // forによる繰り返しは、初期値の設定；繰り返しの条件；増分の設定　
+            // の順番に書く
+            for ( i = 1; i <= 100; i++) {
+                // 数字を足しこむ
+                kai = kai + i;
+                // 別解　kai += i ; 
+            }
+            alert("1～100の合計は" + kai + "です");
+        }
+    </script>
+</head>
+
+<body>
+    <h3>整数の合計</h3>
+    以下のボタンをクリックすると、<br>
+    １～100の整数をすべて合計した結果を表示できます。<br>
+    <button onclick="goukei()">計算結果</button>
+</body>
+
+</html>

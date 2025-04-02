@@ -1,0 +1,95 @@
+<!-- filename: js-2025-0210-24000-yourname.html -->
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            background-color: aqua;
+            width: 100%;
+            height: 10vh; /* 　見える高さの10％ */
+        }
+        nav{
+            background-color: bisque;
+            width: 30%;
+            height: 80vh;
+        }
+        main{
+            background-color: lightcoral;
+            width: 70%;
+            height: 80vh;
+        }
+        footer{
+            background-color: lightblue;
+            width: 100%;
+            height: 10vh;
+        }
+        body{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #sec1{
+            height: 20%;
+            background-color: lightpink;
+        }
+        #sec2{
+            height: 20%;
+            background-color: lightgreen;
+        }
+    </style>
+    <script>
+        function showSec1(){
+            var item = document.getElementById( "sec1")
+            item.style.display = "block"  // block:表示／none:非表示
+        }
+        function hideSec1(){
+            var item = document.getElementById( "sec1")
+            item.style.display = "none"
+        }
+        function selectSec1(){
+            // #sec1を表示
+            var item1 = document.getElementById( "sec1")
+            item1.style.display = "block" // 表示する
+
+            // #sec2を非表示
+            var item2 = document.getElementById( "sec2")
+            item2.style.display = "none"　  //　非表示にする
+        }
+        function selectSec2(){
+            // #sec1を非表示にする
+            var item1 = document.getElementById( "sec1")
+            item1.style.display = "none"
+
+            // #sec2を表示する
+            var item2 = document.getElementById( "sec2")
+            item2.style.display="block"
+        }
+            </script>
+</head>
+<body>
+    <header></header>
+    <nav>
+        <button onclick="showSec1()">#sec1を表示</button>
+        <button onclick="hideSec1()">#sec1を非表示</button>
+        <hr>
+        <button onclick="selectSec1()">#sec1だけを表示</button>
+        <button onclick="selectSec2()">#sec2だけを表示</button>
+    </nav>
+    <main>
+        <section id="sec1">
+            #sec1
+        </section>
+        <section id="sec2">
+            #sec2
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!-- filename: js-2025-0218-24000-yourname.html -->
+<!-- 
+    バリデーション：　入力内容のチェックを行うこと
+    １．フォームを作成する
+    ２．入力内容の変更をイベント処理する
+    ３．正しいか否かの判断を行う。
+    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // ボタンをクリックされたときの関数を定義する
+        function checkSeibetu(){
+            // 性別の中に記入されたオブジェクトを取り出す。
+            var item = document.getElementById( "seibetu");
+            // テキストボックスの中の値を取り出す
+            var nakami = item.value;
+            // ダイアログで確認　　確認出来たら消す。
+            // alert( nakami);
+            if ( nakami == "男" || nakami == "女"){
+
+            }else {
+                alert( "男・女のいづれかを入れてください");
+            }
+            // 上の部分をシンプルに書き直す
+            // if ( nakami != "男" && nakami != "女"){
+            //     alert( "男・女のいづれかを入れてください");
+            // }
+        }
+        function checkNenrei(){
+            // #nenrei オブジェクトの取り出し
+            var item = document.getElementById( "nenrei");
+            // テキストボックスに入力された文字の取り出し
+            var moji = item.value;
+            // 数字の並び（文字列）を数値に変換する
+            var tosi = parseInt( moji);
+            console.log( tosi)
+            // チェック
+            if( 11 > tosi || tosi > 90 ){ 
+                alert( "正しくない値が入っています")
+             }
+
+            // if( 11 <= tosi && tosi <= 90){ }
+            // else { NG} 
+        }
+    </script>
+</head>
+<!--
+ フォームの中に入力された情報は、送信ボタンを押すことでサーバに送られる
+ 入力された情報の正しさをチェックすることをバリデーションという。
+ チェックするためには、適切なイベントと、適切な要素を取得することが必要になる。
+  -->
+<body>
+    <form action="" method="get">
+        <div>
+            <label for="namae">名前</label>
+            <input type="text" name="namae" id="namae" >
+        </div>
+        <div>
+            <label for="seibetu">性別（男／女）</label>
+            <input type="text" name="seibetu" id="seibetu" onchange="checkSeibetu()">
+            <!-- 
+            性別をチェックする関数は、テキストボックスの内容が変わったら(checkSeibetu())実行される
+              -->
+        </div>
+        <div>
+            <label for="nenrei">年齢(00)</label>
+            <input type="text" name="nenrei" id="nenrei" onchange="checkNenrei()">
+            <!-- 仕様（例）：年齢の範囲は、11歳～90歳まで -->
+        </div>
+        <div>
+            <label for="seinengappi">生年月日(YYYY.MM.DD)</label>
+            <input type="text" name="seinengappi" id="seinengappi">
+        </div>
+        <!-- 性別、年齢、生年月日　←　すべてテキストボックス -->
+
+    </form>
+</body>
+</html>
+<!-- 
+コードの感想：
+
+
+-->

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        // 変数の宣言を行うときは、変数名の前にvarを付ける
+        // 行末はセミコロン;
+        var total = 4800;
+        // 配列（変数の並び）を作るときには、new Array（個数）を使用する
+        var a = new Array(3);
+        // 配列の添え字は0から数える
+        a[0] = 2000;
+        a[1] = 400;
+        a[2] = 500;
+        // 関数を作るときには、行頭にfunctionを書く
+        function goukei(i) {
+            // documentはHTML全体をさす。forms[0]はフォームタグを指す。
+            if (document.forms[0].elements[i].checked == true) {
+                total = total + a[i];
+            } else {
+                total = total - a[i]
+            }
+            // elements[3]はテキストボックス
+            document.forms[0].elements[3].value = total;
+        }
+
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <!-- 要素０ -->
+        <input type="checkbox" onclick="goukei(0)">夜間照明（2000円）<br>
+        <!-- 要素１ -->
+        <input type="checkbox" onclick="goukei(1)">バレーボール用ネット（400円）<br>
+        <!-- 要素２ -->
+        <input type="checkbox" onclick="goukei(2)">バレーボール10個（500円）<br>
+        <!-- 要素３ -->
+        <input type="text">
+
+    </form>
+</body>
+
+</html>

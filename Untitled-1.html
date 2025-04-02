@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = 10;                   // 値を一つ格納する通常の変数の定義
+        var scale = 50;
+        var s = new Array(50);        // 同じ名前の変数で、要素数50個をよういする。
+                                    　// 配列名ｓなので、s[0]～s[49]
+        var t = new Array(40);
+        var u = new Array(3);
+        var q = new Array(24);
+
+        s[1] = 11;                  　// 配列の添え字１番目に数字を代入する
+        var seki = new Array(6);      // 二次元配列を作るときは、まず1次元配列を作る
+        seki[0] = new Array(3);       // 1次元配列の各要素に配列を継ぎ足す
+        seki[1] = new Array(3);       // 2次元配列の要素追加は次のように
+                                      // 繰り返しを使うと短くなる。
+        for (i = 0; i <= 5; i++) {  
+            seki[i] = new Array(3);
+        }
+        seki[0][0] = "matuuti"        // 二次元配列のアクセスは、要素のインデックスを2つ指定する。
+        seki[0][1] = "akahosi"
+        seki[0][2] = "amane"
+        seki[3][2] = "yamaji"
+        seki[1][4] = "nakao"
+        seki[1][5] = "akasi"
+        seki[1][2] = "masumoto"
+    </script>
+</head>
+
+<body>
+    <canvas id="mycanvas" width="640px" height="480px"></canvas>
+    <script>
+        // 配列のアクセス
+        document.write("seki[3][2]:" + seki[3][2]);
+        // 2次元配列の作成
+        var h = new Array(6);
+        // 0番目の要素から、6より前の要素に要素を加える
+        for (index = 0; index < 6; index++) {
+            h[index] = new Array(3)
+        }
+    </script>
+</body>
+
+</html>

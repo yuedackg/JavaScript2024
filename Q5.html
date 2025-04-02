@@ -1,0 +1,26 @@
+<!-- filename:　Q5.html -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        // 関数の引数はkakakuで、この値で動きが変わる
+        function zei( kakaku){
+            // 計算部分を共通にして、差分になる部分を変数にする
+            var zeikomi = kakaku * 1.05;
+            alert(( "税込み価格は"+ zeikomi + "円です")); 
+        }
+    </script>
+<script>
+
+</script>
+</head>
+ <body>
+    <!-- 関数の動作を引数の値で変える -->
+    ・商品A（1000円）　<button onclick="zei(1000)">税込み価格</button><br><br>
+    ・商品A（1000円）　<button onclick="zei(1000)">税込み価格</button><br><br>
+    ・商品A（1000円）　<button onclick="zei(1000)">税込み価格</button><br><br>
+
+ </body>
+ </html>

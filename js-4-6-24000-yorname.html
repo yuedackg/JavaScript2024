@@ -1,0 +1,35 @@
+<!-- js-4-6-24000-yourname.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function foo(){
+            window.open( "http://www.yahoo.co.jp/")
+            alert( window.location)
+        }
+        function bar(){
+           window.history.back();
+        }
+        function fillRed(){
+            var item = document.getElementById("myFill")
+            item.style.backgroundColor = "red"
+        }
+    </script>
+</head>
+<body id="myFill">
+    <h1>location オブジェクトの使い方</h1>
+    <button onclick="foo()"> yahooを開く </button>
+    <hr>
+    
+    <h1>historyオブジェクトの使い方</h1>
+    <button onclick="bar()">ひとつ前の画面に戻る</button>
+    <hr>
+    
+    <h1>documentを変更する</h1>
+    <button onclick="fillRed()">背景を赤く塗る</button>
+    <hr>
+</body>
+</html>

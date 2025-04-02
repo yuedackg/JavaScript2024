@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border:  solid 1px gray;
+        }
+    </style>
+    <script>
+        function drawGraph(){
+            // キャンバスcanvas要素をidプロパティの名前を使用して選択する
+            var item = document.getElementById( "canvas");
+            // 線種、色などをまとめたコンテキストを取得する。
+            var pen = canvas.getContext( "2d");
+            // コンテキスト（＝ペン）に対して、色を青に設定する
+            pen.fillStyle = 'blue';
+            // 点を描く
+            pen.fillRect( 50,100,10,20);
+            // 座標軸を描く。窓のサイズは600x400
+            // x = 0, 1, 2,..., 599　まで変える
+            for ( x = 0 ; x < 600 ; x++){
+                // ｙ座標を固定して点を打つ＝横線を描く
+                pen.fillRect( x, 480/2, 1, 1 )
+            }
+            // y = 0, 1, 2, ..., 479
+            for ( y = 0 ; y < 480 ; y++){
+                // ｘ座標を固定して点を打つ＝縦線を描く
+                pen.fillRect( 600/2, y, 1, 1)
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- canvasタグは図形を作成するためのエリア；高さと幅を指定する -->
+    <canvas id="canvas" width="600px" height="480px"></canvas>
+    <!-- クリックされたときの関数を指定する。今回はdrawGraph() -->
+    <button onclick="drawGraph()">drawGraph()</button>
+</body>
+</html>

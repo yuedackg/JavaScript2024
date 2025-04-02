@@ -1,0 +1,109 @@
+<!-- filename: js-2025-0226-24000-yourname.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        header,
+        footer {
+            width: 100%;
+            height: 30vh;
+            background-color: antiquewhite;
+        }
+
+        nav {
+            width: 20%;
+            height: 40vh;
+            background-color: lightpink;
+        }
+
+        main {
+            width: 80%;
+            height: 40vh;
+            background-color: lightskyblue;
+        }
+
+        section {
+            height: 100%;
+            width: 100%;
+            /* margin: 10px; */
+        }
+
+        #sec1 {
+            background-color: red;
+        }
+
+        #sec2 {
+            background-color: green;
+            display: none;
+        }
+
+        #sec3 {
+            background-color: blue;
+            display: none;
+        }
+    </style>
+    <script>
+        // functionは　関数を定義（準備）するキーワード
+        // b2ボタンがクリックされたときの処理
+        function changeSection2() {
+            // section1の要素を選択する
+            var item1 = document.getElementById("sec1");
+            // 選択した要素を非表示（css で、display: none;)にする
+            item1.style.display = "none";
+            var item2 = document.getElementById("sec2");
+            item2.style.display = "block";
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <header> header </header>
+    <nav>
+        ナビ
+        <button id="b1">b1</button>
+        <button id="b2" onclick="changeSection2()">b2</button>
+        <button id="b3">b3</button>
+    </nav>
+    <main>
+        <section id="sec1">section1</section>
+        <section id="sec2">section2</section>
+        <section id="sec3">section3</section>
+    </main>
+    <footer>
+        フッター
+    </footer>
+</body>
+
+<script>
+    // イベントリスナの登録
+    // 要素を取り出す。 ボタン３を選択した
+    var btn3 = document.getElementById("b3");
+    // イベントリスナの登録
+    btn3.addEventListener('click', () => {
+        var item1 = document.getElementById( "sec1")
+        sec1.style.display = "none";
+        var item2 = document.getElementById( "sec2")
+        item2.style.display = "none";
+        var item3 = document.getElementById( "sec3")
+        item3.style.display = "block";
+    });
+
+</script>
+
+</html>
